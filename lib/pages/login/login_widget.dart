@@ -1,7 +1,9 @@
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'login_model.dart';
 export 'login_model.dart';
 
@@ -12,10 +14,13 @@ class LoginWidget extends StatefulWidget {
   State<LoginWidget> createState() => _LoginWidgetState();
 }
 
-class _LoginWidgetState extends State<LoginWidget> {
+class _LoginWidgetState extends State<LoginWidget>
+    with TickerProviderStateMixin {
   late LoginModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
@@ -27,6 +32,22 @@ class _LoginWidgetState extends State<LoginWidget> {
 
     _model.textController2 ??= TextEditingController();
     _model.textFieldFocusNode2 ??= FocusNode();
+
+    animationsMap.addAll({
+      'circleImageOnPageLoadAnimation': AnimationInfo(
+        loop: true,
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          ShimmerEffect(
+            curve: Curves.linear,
+            delay: 0.0.ms,
+            duration: 1000.0.ms,
+            color: const Color(0x80FFFFFF),
+            angle: 0.524,
+          ),
+        ],
+      ),
+    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -58,20 +79,37 @@ class _LoginWidgetState extends State<LoginWidget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      width: 54.0,
-                      height: 55.0,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12.0),
-                        border: Border.all(
-                          color: const Color(0xFF3D3D3D),
-                          width: 3.5,
+                    InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        context.goNamed(
+                          'onboarding',
+                          extra: <String, dynamic>{
+                            kTransitionInfoKey: const TransitionInfo(
+                              hasTransition: true,
+                              transitionType: PageTransitionType.leftToRight,
+                            ),
+                          },
+                        );
+                      },
+                      child: Container(
+                        width: 54.0,
+                        height: 55.0,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12.0),
+                          border: Border.all(
+                            color: const Color(0xFF3D3D3D),
+                            width: 3.5,
+                          ),
                         ),
-                      ),
-                      child: Icon(
-                        Icons.arrow_left_rounded,
-                        color: FlutterFlowTheme.of(context).secondaryText,
-                        size: 46.0,
+                        child: Icon(
+                          Icons.arrow_left_rounded,
+                          color: FlutterFlowTheme.of(context).secondaryText,
+                          size: 46.0,
+                        ),
                       ),
                     ),
                     Container(
@@ -85,7 +123,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                         'assets/images/gethsemane.jpg',
                         fit: BoxFit.fill,
                       ),
-                    ),
+                    ).animateOnPageLoad(
+                        animationsMap['circleImageOnPageLoadAnimation']!),
                   ],
                 ),
               ),
@@ -114,7 +153,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                 child: TextFormField(
                   controller: _model.textController1,
                   focusNode: _model.textFieldFocusNode1,
-                  autofocus: true,
+                  autofocus: false,
                   obscureText: false,
                   decoration: InputDecoration(
                     labelText: FFLocalizations.of(context).getText(
@@ -153,6 +192,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Poppins',
                         color: const Color(0xFFF5F5F5),
+                        fontSize: 15.0,
                         letterSpacing: 0.0,
                       ),
                   validator:
@@ -164,7 +204,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                 child: TextFormField(
                   controller: _model.textController2,
                   focusNode: _model.textFieldFocusNode2,
-                  autofocus: true,
+                  autofocus: false,
                   obscureText: !_model.passwordVisibility,
                   decoration: InputDecoration(
                     labelText: FFLocalizations.of(context).getText(
@@ -209,7 +249,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                         _model.passwordVisibility
                             ? Icons.visibility_outlined
                             : Icons.visibility_off_outlined,
-                        color: const Color(0xFFF5F5F5),
+                        color: const Color(0xFFC7C7C7),
                         size: 24.0,
                       ),
                     ),
@@ -217,6 +257,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Poppins',
                         color: const Color(0xFFF5F5F5),
+                        fontSize: 15.0,
                         letterSpacing: 0.0,
                       ),
                   validator:
@@ -278,40 +319,58 @@ class _LoginWidgetState extends State<LoginWidget> {
                 alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
-                  child: RichText(
-                    textScaler: MediaQuery.of(context).textScaler,
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: FFLocalizations.of(context).getText(
-                            'oazndi5g' /* Don't have an account?  */,
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      context.goNamed(
+                        'signup',
+                        extra: <String, dynamic>{
+                          kTransitionInfoKey: const TransitionInfo(
+                            hasTransition: true,
+                            transitionType: PageTransitionType.rightToLeft,
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).titleSmall.override(
-                                    fontFamily: 'Poppins',
-                                    color: const Color(0xFFC7C7C7),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.normal,
-                                  ),
-                        ),
-                        TextSpan(
-                          text: FFLocalizations.of(context).getText(
-                            'kzjt2ejo' /* Sign up here */,
+                        },
+                      );
+                    },
+                    child: RichText(
+                      textScaler: MediaQuery.of(context).textScaler,
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: FFLocalizations.of(context).getText(
+                              'oazndi5g' /* Don't have an account?  */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  fontFamily: 'Poppins',
+                                  color: const Color(0xFFC7C7C7),
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.normal,
+                                ),
                           ),
-                          style: const TextStyle(
-                            color: Color(0xFFEF3939),
-                            fontWeight: FontWeight.w800,
-                          ),
-                        )
-                      ],
-                      style: FlutterFlowTheme.of(context).titleSmall.override(
-                            fontFamily: 'Poppins',
-                            color: const Color(0xFFC7C7C7),
-                            letterSpacing: 0.0,
-                            fontWeight: FontWeight.normal,
-                          ),
+                          TextSpan(
+                            text: FFLocalizations.of(context).getText(
+                              'kzjt2ejo' /* Sign up here */,
+                            ),
+                            style: const TextStyle(
+                              color: Color(0xFFEF3939),
+                              fontWeight: FontWeight.w800,
+                            ),
+                          )
+                        ],
+                        style: FlutterFlowTheme.of(context).titleSmall.override(
+                              fontFamily: 'Poppins',
+                              color: const Color(0xFFC7C7C7),
+                              letterSpacing: 0.0,
+                              fontWeight: FontWeight.normal,
+                            ),
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                 ),
               ),

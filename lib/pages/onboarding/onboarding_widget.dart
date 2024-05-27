@@ -1,8 +1,10 @@
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'onboarding_model.dart';
 export 'onboarding_model.dart';
 
@@ -13,15 +15,33 @@ class OnboardingWidget extends StatefulWidget {
   State<OnboardingWidget> createState() => _OnboardingWidgetState();
 }
 
-class _OnboardingWidgetState extends State<OnboardingWidget> {
+class _OnboardingWidgetState extends State<OnboardingWidget>
+    with TickerProviderStateMixin {
   late OnboardingModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => OnboardingModel());
+
+    animationsMap.addAll({
+      'circleImageOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          ShimmerEffect(
+            curve: Curves.linear,
+            delay: 0.0.ms,
+            duration: 1000.0.ms,
+            color: const Color(0x80FFFFFF),
+            angle: 0.524,
+          ),
+        ],
+      ),
+    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -164,7 +184,8 @@ Guntur */
                     'assets/images/gethsemane.jpg',
                     fit: BoxFit.fill,
                   ),
-                ),
+                ).animateOnPageLoad(
+                    animationsMap['circleImageOnPageLoadAnimation']!),
               ),
             ),
             Align(
