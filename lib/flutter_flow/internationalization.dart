@@ -107,10 +107,6 @@ Locale createLocale(String language) => language.contains('_')
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // onboarding
   {
-    'a41bogkl': {
-      'en': 'Get Started',
-      'te': '',
-    },
     'vsvyvztr': {
       'en': 'Gethsemane Church\nGuntur',
       'te': '',
@@ -133,6 +129,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'yloyifit': {
       'en': 'Regain',
+      'te': '',
+    },
+    'a41bogkl': {
+      'en': 'Get Started',
       'te': '',
     },
     'smaepx3o': {

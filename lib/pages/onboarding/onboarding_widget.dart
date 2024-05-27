@@ -99,16 +99,96 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                     sigmaX: 1.0,
                     sigmaY: 1.0,
                   ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Flexible(
-                        child: Align(
+                  child: Align(
+                    alignment: const AlignmentDirectional(0.0, 0.82),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 15.0),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'vsvyvztr' /* Gethsemane Church
+Guntur */
+                              ,
+                            ),
+                            textAlign: TextAlign.center,
+                            style: FlutterFlowTheme.of(context)
+                                .headlineMedium
+                                .override(
+                                  fontFamily: 'Raleway',
+                                  color: const Color(0xFFF5F5F5),
+                                  fontSize: 32.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                          ),
+                        ),
+                        Align(
+                          alignment: const AlignmentDirectional(0.0, 0.68),
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 15.0),
+                            child: RichText(
+                              textScaler: MediaQuery.of(context).textScaler,
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: FFLocalizations.of(context).getText(
+                                      'fcv8mdh6' /* Revive */,
+                                    ),
+                                    style: const TextStyle(),
+                                  ),
+                                  TextSpan(
+                                    text: FFLocalizations.of(context).getText(
+                                      'klgq3dxj' /*  ·  */,
+                                    ),
+                                    style: const TextStyle(
+                                      color: Color(0xFFEF3939),
+                                      fontSize: 20.0,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: FFLocalizations.of(context).getText(
+                                      'cppd1tdd' /* Refresh */,
+                                    ),
+                                    style: const TextStyle(),
+                                  ),
+                                  TextSpan(
+                                    text: FFLocalizations.of(context).getText(
+                                      '2hggitjp' /*  ·  */,
+                                    ),
+                                    style: const TextStyle(
+                                      color: Color(0xFFEF3939),
+                                      fontSize: 20.0,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: FFLocalizations.of(context).getText(
+                                      'yloyifit' /* Regain */,
+                                    ),
+                                    style: const TextStyle(),
+                                  )
+                                ],
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Poppins',
+                                      color: const Color(0xFFF5F5F5),
+                                      fontSize: 17.0,
+                                      letterSpacing: 0.5,
+                                    ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Align(
                           alignment: const AlignmentDirectional(0.0, 0.87),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
-                                16.0, 0.0, 16.0, 0.0),
+                                16.0, 10.0, 16.0, 0.0),
                             child: FFButtonWidget(
                               onPressed: () async {
                                 context.pushNamed('login');
@@ -142,33 +222,11 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-            Stack(
-              children: [
-                Align(
-                  alignment: const AlignmentDirectional(0.0, 0.55),
-                  child: Text(
-                    FFLocalizations.of(context).getText(
-                      'vsvyvztr' /* Gethsemane Church
-Guntur */
-                      ,
-                    ),
-                    textAlign: TextAlign.center,
-                    style: FlutterFlowTheme.of(context).headlineMedium.override(
-                          fontFamily: 'Raleway',
-                          color: const Color(0xFFF5F5F5),
-                          fontSize: 32.0,
-                          letterSpacing: 0.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                  ),
-                ),
-              ],
             ),
             Align(
               alignment: const AlignmentDirectional(1.0, -1.0),
@@ -187,58 +245,6 @@ Guntur */
                   ),
                 ).animateOnPageLoad(
                     animationsMap['circleImageOnPageLoadAnimation']!),
-              ),
-            ),
-            Align(
-              alignment: const AlignmentDirectional(0.0, 0.68),
-              child: RichText(
-                textScaler: MediaQuery.of(context).textScaler,
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                      text: FFLocalizations.of(context).getText(
-                        'fcv8mdh6' /* Revive */,
-                      ),
-                      style: const TextStyle(),
-                    ),
-                    TextSpan(
-                      text: FFLocalizations.of(context).getText(
-                        'klgq3dxj' /*  ·  */,
-                      ),
-                      style: const TextStyle(
-                        color: Color(0xFFEF3939),
-                        fontSize: 20.0,
-                      ),
-                    ),
-                    TextSpan(
-                      text: FFLocalizations.of(context).getText(
-                        'cppd1tdd' /* Refresh */,
-                      ),
-                      style: const TextStyle(),
-                    ),
-                    TextSpan(
-                      text: FFLocalizations.of(context).getText(
-                        '2hggitjp' /*  ·  */,
-                      ),
-                      style: const TextStyle(
-                        color: Color(0xFFEF3939),
-                        fontSize: 20.0,
-                      ),
-                    ),
-                    TextSpan(
-                      text: FFLocalizations.of(context).getText(
-                        'yloyifit' /* Regain */,
-                      ),
-                      style: const TextStyle(),
-                    )
-                  ],
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Poppins',
-                        color: const Color(0xFFF5F5F5),
-                        fontSize: 17.0,
-                        letterSpacing: 0.5,
-                      ),
-                ),
               ),
             ),
           ],
