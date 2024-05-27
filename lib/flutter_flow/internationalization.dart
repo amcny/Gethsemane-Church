@@ -107,7 +107,35 @@ Locale createLocale(String language) => language.contains('_')
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // onboarding
   {
-    's4fie6cu': {
+    'a41bogkl': {
+      'en': 'Get Started',
+      'te': '',
+    },
+    'vsvyvztr': {
+      'en': 'Gethsemane Church\nGuntur',
+      'te': '',
+    },
+    'fcv8mdh6': {
+      'en': 'Revive',
+      'te': '',
+    },
+    'klgq3dxj': {
+      'en': ' · ',
+      'te': '',
+    },
+    'cppd1tdd': {
+      'en': 'Refresh',
+      'te': '',
+    },
+    '2hggitjp': {
+      'en': ' · ',
+      'te': '',
+    },
+    'yloyifit': {
+      'en': 'Regain',
+      'te': '',
+    },
+    'smaepx3o': {
       'en': 'Home',
       'te': '',
     },
