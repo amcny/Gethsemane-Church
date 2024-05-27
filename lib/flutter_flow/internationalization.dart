@@ -140,6 +140,128 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
     },
   },
+  // login
+  {
+    'ee8v8dfz': {
+      'en': 'Login',
+      'te': '',
+    },
+    '4pt94s8h': {
+      'en': 'Email',
+      'te': '',
+    },
+    '23hrd11x': {
+      'en': 'Password',
+      'te': '',
+    },
+    '0augqnb1': {
+      'en': 'Submit',
+      'te': '',
+    },
+    'vj6taey4': {
+      'en': 'Forgot Password?',
+      'te': '',
+    },
+    'oazndi5g': {
+      'en': 'Don\'t have an account? ',
+      'te': '',
+    },
+    'kzjt2ejo': {
+      'en': 'Sign up here',
+      'te': '',
+    },
+    '9qvroqh7': {
+      'en': 'Don\'t have an account? Sign up here',
+      'te': '',
+    },
+    'qo5637j5': {
+      'en': 'Gethsemane Church',
+      'te': '',
+    },
+    'xzwpiu0t': {
+      'en': 'Revive',
+      'te': '',
+    },
+    'pi1w9m37': {
+      'en': ' · ',
+      'te': '',
+    },
+    'vpxklbr4': {
+      'en': 'Refresh',
+      'te': '',
+    },
+    't1fisfbh': {
+      'en': ' · ',
+      'te': '',
+    },
+    '0scll0cm': {
+      'en': 'Regain',
+      'te': '',
+    },
+    'm4dcn61h': {
+      'en': 'Home',
+      'te': '',
+    },
+  },
+  // signup
+  {
+    's6mf1q21': {
+      'en': 'Sign up',
+      'te': '',
+    },
+    'g9tyig20': {
+      'en': 'Email',
+      'te': '',
+    },
+    'ri25yjtw': {
+      'en': 'Password',
+      'te': '',
+    },
+    '9et1id6q': {
+      'en': 'Submit',
+      'te': '',
+    },
+    '6id43nkg': {
+      'en': 'Already have an account?  ',
+      'te': '',
+    },
+    'b72xulji': {
+      'en': 'Login here',
+      'te': '',
+    },
+    '0wciu16f': {
+      'en': 'Don\'t have an account? Sign up here',
+      'te': '',
+    },
+    'v4jdzt1z': {
+      'en': 'Gethsemane Church',
+      'te': '',
+    },
+    '0qbt7yop': {
+      'en': 'Revive',
+      'te': '',
+    },
+    'bq162vwv': {
+      'en': ' · ',
+      'te': '',
+    },
+    '0vvt46ub': {
+      'en': 'Refresh',
+      'te': '',
+    },
+    '0yjcocfo': {
+      'en': ' · ',
+      'te': '',
+    },
+    'nx16qtmt': {
+      'en': 'Regain',
+      'te': '',
+    },
+    'ktvkcu4d': {
+      'en': 'Home',
+      'te': '',
+    },
+  },
   // Miscellaneous
   {
     'x3fwh110': {
