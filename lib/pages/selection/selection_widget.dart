@@ -53,9 +53,7 @@ class _SelectionWidgetState extends State<SelectionWidget> {
                 child: Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(16.0, 25.0, 0.0, 0.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      '7o3rsbhh' /* Select your Church Branch */,
-                    ),
+                    'Select your Church Branch',
                     style: FlutterFlowTheme.of(context).titleMedium.override(
                           fontFamily: 'Poppins',
                           color: const Color(0xFFF5F5F5),
@@ -71,21 +69,11 @@ class _SelectionWidgetState extends State<SelectionWidget> {
                   padding: const EdgeInsetsDirectional.fromSTEB(16.0, 25.0, 0.0, 0.0),
                   child: FlutterFlowRadioButton(
                     options: [
-                      FFLocalizations.of(context).getText(
-                        'gcefmz32' /* NGO's Colony */,
-                      ),
-                      FFLocalizations.of(context).getText(
-                        'hzs1cftf' /* Nethaji Nagar */,
-                      ),
-                      FFLocalizations.of(context).getText(
-                        '9cm40ujm' /* Pulladi Gunta */,
-                      ),
-                      FFLocalizations.of(context).getText(
-                        'x2ie96j2' /* Etukuru */,
-                      ),
-                      FFLocalizations.of(context).getText(
-                        'b5hu7z1h' /* Rajendra Nagar */,
-                      )
+                      'NGO\'s Colony',
+                      'Nethaji Nagar',
+                      'Pulladi Gunta',
+                      'Etukuru',
+                      'Rajendra Nagar'
                     ].toList(),
                     onChanged: (val) => setState(() {}),
                     controller: _model.radioButtonValueController ??=
@@ -123,9 +111,7 @@ class _SelectionWidgetState extends State<SelectionWidget> {
                       FFAppState().branch = _model.radioButtonValue!;
                     });
                   },
-                  text: FFLocalizations.of(context).getText(
-                    '2nty70uc' /* Submit */,
-                  ),
+                  text: 'Submit',
                   options: FFButtonOptions(
                     width: MediaQuery.sizeOf(context).width * 0.8,
                     height: 60.0,

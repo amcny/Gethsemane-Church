@@ -78,7 +78,6 @@ class _MyAppState extends State<MyApp> {
       locale: _locale,
       supportedLocales: const [
         Locale('en'),
-        Locale('te'),
       ],
       theme: ThemeData(
         brightness: Brightness.light,
@@ -132,31 +131,27 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPage = null;
           _currentPageName = tabs.keys.toList()[i];
         }),
-        backgroundColor: const Color(0xFFF5F5F5),
+        backgroundColor: const Color(0xFF1E1E1E),
         selectedItemColor: const Color(0xFFEF3939),
-        unselectedItemColor: const Color(0xFF3D3D3D),
+        unselectedItemColor: const Color(0xFFC7C7C7),
         showSelectedLabels: true,
         showUnselectedLabels: true,
         type: BottomNavigationBarType.fixed,
-        items: <BottomNavigationBarItem>[
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: const FaIcon(
+            icon: FaIcon(
               FontAwesomeIcons.home,
               size: 18.0,
             ),
-            label: FFLocalizations.of(context).getText(
-              'i7j43r7a' /* Home */,
-            ),
+            label: 'Home',
             tooltip: '',
           ),
           BottomNavigationBarItem(
-            icon: const FaIcon(
+            icon: FaIcon(
               FontAwesomeIcons.prayingHands,
               size: 20.0,
             ),
-            label: FFLocalizations.of(context).getText(
-              '2567yhjx' /* Prayer Requests */,
-            ),
+            label: 'Prayer Requests',
             tooltip: '',
           )
         ],

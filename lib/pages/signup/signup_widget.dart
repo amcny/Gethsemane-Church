@@ -134,9 +134,7 @@ class _SignupWidgetState extends State<SignupWidget>
                   padding:
                       const EdgeInsetsDirectional.fromSTEB(16.0, 85.0, 0.0, 10.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      's6mf1q21' /* Sign up */,
-                    ),
+                    'Sign up',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
                           fontFamily: 'Raleway',
@@ -156,9 +154,7 @@ class _SignupWidgetState extends State<SignupWidget>
                   autofocus: false,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: FFLocalizations.of(context).getText(
-                      'g9tyig20' /* Email */,
-                    ),
+                    labelText: 'Email',
                     enabledBorder: UnderlineInputBorder(
                       borderSide: const BorderSide(
                         color: Color(0xFF3D3D3D),
@@ -207,9 +203,7 @@ class _SignupWidgetState extends State<SignupWidget>
                   autofocus: false,
                   obscureText: !_model.passwordVisibility,
                   decoration: InputDecoration(
-                    labelText: FFLocalizations.of(context).getText(
-                      'ri25yjtw' /* Password */,
-                    ),
+                    labelText: 'Password',
                     enabledBorder: UnderlineInputBorder(
                       borderSide: const BorderSide(
                         color: Color(0xFF3D3D3D),
@@ -270,9 +264,7 @@ class _SignupWidgetState extends State<SignupWidget>
                   onPressed: () async {
                     context.pushNamed('signup');
                   },
-                  text: FFLocalizations.of(context).getText(
-                    '9et1id6q' /* Submit */,
-                  ),
+                  text: 'Submit',
                   options: FFButtonOptions(
                     width: MediaQuery.sizeOf(context).width * 0.8,
                     height: 60.0,
@@ -322,9 +314,7 @@ class _SignupWidgetState extends State<SignupWidget>
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: FFLocalizations.of(context).getText(
-                              '6id43nkg' /* Already have an account?   */,
-                            ),
+                            text: 'Already have an account?  ',
                             style: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
@@ -334,11 +324,9 @@ class _SignupWidgetState extends State<SignupWidget>
                                   fontWeight: FontWeight.normal,
                                 ),
                           ),
-                          TextSpan(
-                            text: FFLocalizations.of(context).getText(
-                              'b72xulji' /* Login here */,
-                            ),
-                            style: const TextStyle(
+                          const TextSpan(
+                            text: 'Login here',
+                            style: TextStyle(
                               color: Color(0xFFEF3939),
                               fontWeight: FontWeight.w800,
                             ),
@@ -363,9 +351,7 @@ class _SignupWidgetState extends State<SignupWidget>
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        FFLocalizations.of(context).getText(
-                          'v4jdzt1z' /* Gethsemane Church */,
-                        ),
+                        'Gethsemane Church',
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
@@ -381,42 +367,32 @@ class _SignupWidgetState extends State<SignupWidget>
                         child: RichText(
                           textScaler: MediaQuery.of(context).textScaler,
                           text: TextSpan(
-                            children: [
+                            children: const [
                               TextSpan(
-                                text: FFLocalizations.of(context).getText(
-                                  '0qbt7yop' /* Revive */,
-                                ),
-                                style: const TextStyle(),
+                                text: 'Revive',
+                                style: TextStyle(),
                               ),
                               TextSpan(
-                                text: FFLocalizations.of(context).getText(
-                                  'bq162vwv' /*  ·  */,
-                                ),
-                                style: const TextStyle(
+                                text: ' · ',
+                                style: TextStyle(
                                   color: Color(0xFFEF3939),
                                   fontSize: 20.0,
                                 ),
                               ),
                               TextSpan(
-                                text: FFLocalizations.of(context).getText(
-                                  '0vvt46ub' /* Refresh */,
-                                ),
-                                style: const TextStyle(),
+                                text: 'Refresh',
+                                style: TextStyle(),
                               ),
                               TextSpan(
-                                text: FFLocalizations.of(context).getText(
-                                  '0yjcocfo' /*  ·  */,
-                                ),
-                                style: const TextStyle(
+                                text: ' · ',
+                                style: TextStyle(
                                   color: Color(0xFFEF3939),
                                   fontSize: 20.0,
                                 ),
                               ),
                               TextSpan(
-                                text: FFLocalizations.of(context).getText(
-                                  'nx16qtmt' /* Reborn */,
-                                ),
-                                style: const TextStyle(),
+                                text: 'Reborn',
+                                style: TextStyle(),
                               )
                             ],
                             style: FlutterFlowTheme.of(context)

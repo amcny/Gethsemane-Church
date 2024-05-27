@@ -78,9 +78,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: FFLocalizations.of(context).getText(
-                              'l3k7xxeg' /* Hi,  */,
-                            ),
+                            text: 'Hi, ',
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .override(
@@ -90,13 +88,9 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                   fontWeight: FontWeight.w500,
                                 ),
                           ),
-                          TextSpan(
-                            text: FFLocalizations.of(context).getText(
-                              '34ug5vtm' /* Praise the Lord
- */
-                              ,
-                            ),
-                            style: const TextStyle(
+                          const TextSpan(
+                            text: 'Praise the Lord\n',
+                            style: TextStyle(
                               color: Color(0xFFEF3939),
                               fontWeight: FontWeight.bold,
                             ),
@@ -198,9 +192,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                 child: Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 0.0, 0.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'i3ikvkk4' /* YouTube Sermons */,
-                    ),
+                    'Short Sermons',
                     style: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Poppins',
                           color: const Color(0xFFF5F5F5),

@@ -109,9 +109,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 5.0),
                           child: Text(
-                            FFLocalizations.of(context).getText(
-                              'vsvyvztr' /* Gethsemane Church */,
-                            ),
+                            'Gethsemane Church',
                             textAlign: TextAlign.center,
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
@@ -128,9 +126,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 20.0),
                           child: Text(
-                            FFLocalizations.of(context).getText(
-                              '4vhzhbma' /* Pastor: Rev. Y. Prudhvi Raju */,
-                            ),
+                            'Pastor: Rev. Y. Prudhvi Raju',
                             textAlign: TextAlign.center,
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
@@ -151,42 +147,32 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                             child: RichText(
                               textScaler: MediaQuery.of(context).textScaler,
                               text: TextSpan(
-                                children: [
+                                children: const [
                                   TextSpan(
-                                    text: FFLocalizations.of(context).getText(
-                                      'fcv8mdh6' /* Revive */,
-                                    ),
-                                    style: const TextStyle(),
+                                    text: 'Revive',
+                                    style: TextStyle(),
                                   ),
                                   TextSpan(
-                                    text: FFLocalizations.of(context).getText(
-                                      'klgq3dxj' /*  ·  */,
-                                    ),
-                                    style: const TextStyle(
+                                    text: ' · ',
+                                    style: TextStyle(
                                       color: Color(0xFFEF3939),
                                       fontSize: 20.0,
                                     ),
                                   ),
                                   TextSpan(
-                                    text: FFLocalizations.of(context).getText(
-                                      'cppd1tdd' /* Refresh */,
-                                    ),
-                                    style: const TextStyle(),
+                                    text: 'Refresh',
+                                    style: TextStyle(),
                                   ),
                                   TextSpan(
-                                    text: FFLocalizations.of(context).getText(
-                                      '2hggitjp' /*  ·  */,
-                                    ),
-                                    style: const TextStyle(
+                                    text: ' · ',
+                                    style: TextStyle(
                                       color: Color(0xFFEF3939),
                                       fontSize: 20.0,
                                     ),
                                   ),
                                   TextSpan(
-                                    text: FFLocalizations.of(context).getText(
-                                      'yloyifit' /* Reborn */,
-                                    ),
-                                    style: const TextStyle(),
+                                    text: 'Reborn',
+                                    style: TextStyle(),
                                   )
                                 ],
                                 style: FlutterFlowTheme.of(context)
@@ -210,9 +196,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                               onPressed: () async {
                                 context.goNamed('login');
                               },
-                              text: FFLocalizations.of(context).getText(
-                                'a41bogkl' /* Get Started */,
-                              ),
+                              text: 'Get Started',
                               options: FFButtonOptions(
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 height: 60.0,

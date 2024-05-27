@@ -44,9 +44,7 @@ class _PrayersWidgetState extends State<PrayersWidget> {
           backgroundColor: const Color(0xFF131313),
           automaticallyImplyLeading: false,
           title: Text(
-            FFLocalizations.of(context).getText(
-              'oul6a5b3' /* Prayer Requests */,
-            ),
+            'Prayer Requests',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Poppins',
                   color: const Color(0xFFF5F5F5),

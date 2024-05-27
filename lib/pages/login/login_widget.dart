@@ -134,9 +134,7 @@ class _LoginWidgetState extends State<LoginWidget>
                   padding:
                       const EdgeInsetsDirectional.fromSTEB(16.0, 85.0, 0.0, 10.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'ee8v8dfz' /* Login */,
-                    ),
+                    'Login',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
                           fontFamily: 'Raleway',
@@ -156,9 +154,7 @@ class _LoginWidgetState extends State<LoginWidget>
                   autofocus: false,
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: FFLocalizations.of(context).getText(
-                      '4pt94s8h' /* Email */,
-                    ),
+                    labelText: 'Email',
                     enabledBorder: UnderlineInputBorder(
                       borderSide: const BorderSide(
                         color: Color(0xFF3D3D3D),
@@ -207,9 +203,7 @@ class _LoginWidgetState extends State<LoginWidget>
                   autofocus: false,
                   obscureText: !_model.passwordVisibility,
                   decoration: InputDecoration(
-                    labelText: FFLocalizations.of(context).getText(
-                      '23hrd11x' /* Password */,
-                    ),
+                    labelText: 'Password',
                     enabledBorder: UnderlineInputBorder(
                       borderSide: const BorderSide(
                         color: Color(0xFF3D3D3D),
@@ -270,9 +264,7 @@ class _LoginWidgetState extends State<LoginWidget>
                   onPressed: () async {
                     context.pushNamed('login');
                   },
-                  text: FFLocalizations.of(context).getText(
-                    '0augqnb1' /* Submit */,
-                  ),
+                  text: 'Submit',
                   options: FFButtonOptions(
                     width: MediaQuery.sizeOf(context).width * 0.8,
                     height: 60.0,
@@ -302,9 +294,7 @@ class _LoginWidgetState extends State<LoginWidget>
                 child: Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      'vj6taey4' /* Forgot Password? */,
-                    ),
+                    'Forgot Password?',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Poppins',
@@ -340,9 +330,7 @@ class _LoginWidgetState extends State<LoginWidget>
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: FFLocalizations.of(context).getText(
-                              'oazndi5g' /* Don't have an account?  */,
-                            ),
+                            text: 'Don\'t have an account? ',
                             style: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
@@ -352,11 +340,9 @@ class _LoginWidgetState extends State<LoginWidget>
                                   fontWeight: FontWeight.normal,
                                 ),
                           ),
-                          TextSpan(
-                            text: FFLocalizations.of(context).getText(
-                              'kzjt2ejo' /* Sign up here */,
-                            ),
-                            style: const TextStyle(
+                          const TextSpan(
+                            text: 'Sign up here',
+                            style: TextStyle(
                               color: Color(0xFFEF3939),
                               fontWeight: FontWeight.w800,
                             ),
@@ -381,9 +367,7 @@ class _LoginWidgetState extends State<LoginWidget>
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        FFLocalizations.of(context).getText(
-                          'qo5637j5' /* Gethsemane Church */,
-                        ),
+                        'Gethsemane Church',
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
@@ -399,42 +383,32 @@ class _LoginWidgetState extends State<LoginWidget>
                         child: RichText(
                           textScaler: MediaQuery.of(context).textScaler,
                           text: TextSpan(
-                            children: [
+                            children: const [
                               TextSpan(
-                                text: FFLocalizations.of(context).getText(
-                                  'xzwpiu0t' /* Revive */,
-                                ),
-                                style: const TextStyle(),
+                                text: 'Revive',
+                                style: TextStyle(),
                               ),
                               TextSpan(
-                                text: FFLocalizations.of(context).getText(
-                                  'pi1w9m37' /*  ·  */,
-                                ),
-                                style: const TextStyle(
+                                text: ' · ',
+                                style: TextStyle(
                                   color: Color(0xFFEF3939),
                                   fontSize: 20.0,
                                 ),
                               ),
                               TextSpan(
-                                text: FFLocalizations.of(context).getText(
-                                  'vpxklbr4' /* Refresh */,
-                                ),
-                                style: const TextStyle(),
+                                text: 'Refresh',
+                                style: TextStyle(),
                               ),
                               TextSpan(
-                                text: FFLocalizations.of(context).getText(
-                                  't1fisfbh' /*  ·  */,
-                                ),
-                                style: const TextStyle(
+                                text: ' · ',
+                                style: TextStyle(
                                   color: Color(0xFFEF3939),
                                   fontSize: 20.0,
                                 ),
                               ),
                               TextSpan(
-                                text: FFLocalizations.of(context).getText(
-                                  '0scll0cm' /* Reborn */,
-                                ),
-                                style: const TextStyle(),
+                                text: 'Reborn',
+                                style: TextStyle(),
                               )
                             ],
                             style: FlutterFlowTheme.of(context)
