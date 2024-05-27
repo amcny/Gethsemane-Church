@@ -35,12 +35,13 @@ class _SignupWidgetState extends State<SignupWidget>
 
     animationsMap.addAll({
       'circleImageOnPageLoadAnimation': AnimationInfo(
+        loop: true,
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
           ShimmerEffect(
             curve: Curves.linear,
             delay: 0.0.ms,
-            duration: 1200.0.ms,
+            duration: 1600.0.ms,
             color: const Color(0x80FFFFFF),
             angle: 0.524,
           ),
@@ -371,7 +372,7 @@ class _SignupWidgetState extends State<SignupWidget>
                             .override(
                               fontFamily: 'Raleway',
                               color: const Color(0xFFE3E3E3),
-                              fontSize: 32.0,
+                              fontSize: 30.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
                             ),
@@ -423,13 +424,13 @@ class _SignupWidgetState extends State<SignupWidget>
                                 .override(
                                   fontFamily: 'Poppins',
                                   color: const Color(0xFFE3E3E3),
-                                  fontSize: 17.0,
+                                  fontSize: 16.0,
                                   letterSpacing: 0.5,
                                 ),
                           ),
                         ),
                       ),
-                    ].divide(const SizedBox(height: 20.0)),
+                    ].divide(const SizedBox(height: 18.0)),
                   ),
                 ),
               ),

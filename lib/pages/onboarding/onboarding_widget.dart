@@ -30,12 +30,13 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
 
     animationsMap.addAll({
       'circleImageOnPageLoadAnimation': AnimationInfo(
+        loop: true,
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
           ShimmerEffect(
             curve: Curves.linear,
             delay: 0.0.ms,
-            duration: 1200.0.ms,
+            duration: 1600.0.ms,
             color: const Color(0x80FFFFFF),
             angle: 0.524,
           ),
