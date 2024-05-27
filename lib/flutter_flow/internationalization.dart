@@ -324,6 +324,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
     },
   },
+  // prayers
+  {
+    'oul6a5b3': {
+      'en': 'Prayer Requests',
+      'te': '',
+    },
+    '2567yhjx': {
+      'en': 'Prayer Requests',
+      'te': '',
+    },
+  },
   // Miscellaneous
   {
     'x3fwh110': {

@@ -1,8 +1,10 @@
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'homepage_model.dart';
 export 'homepage_model.dart';
 
@@ -13,15 +15,33 @@ class HomepageWidget extends StatefulWidget {
   State<HomepageWidget> createState() => _HomepageWidgetState();
 }
 
-class _HomepageWidgetState extends State<HomepageWidget> {
+class _HomepageWidgetState extends State<HomepageWidget>
+    with TickerProviderStateMixin {
   late HomepageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => HomepageModel());
+
+    animationsMap.addAll({
+      'imageOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          ShimmerEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 1600.0.ms,
+            color: const Color(0x80FFFFFF),
+            angle: 0.524,
+          ),
+        ],
+      ),
+    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -171,7 +191,7 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                       ),
                     ),
                   ),
-                ),
+                ).animateOnPageLoad(animationsMap['imageOnPageLoadAnimation']!),
               ),
               Align(
                 alignment: const AlignmentDirectional(-1.0, 0.0),

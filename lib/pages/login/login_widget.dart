@@ -105,9 +105,9 @@ class _LoginWidgetState extends State<LoginWidget>
                             width: 3.5,
                           ),
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_left_rounded,
-                          color: FlutterFlowTheme.of(context).secondaryText,
+                          color: Color(0xFFC7C7C7),
                           size: 46.0,
                         ),
                       ),

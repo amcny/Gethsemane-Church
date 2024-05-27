@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '/index.dart';
+import '/main.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 export 'package:go_router/go_router.dart';
@@ -74,12 +75,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'homepage',
           path: '/homepage',
-          builder: (context, params) => const HomepageWidget(),
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'homepage')
+              : const HomepageWidget(),
         ),
         FFRoute(
           name: 'selection',
           path: '/selection',
           builder: (context, params) => const SelectionWidget(),
+        ),
+        FFRoute(
+          name: 'prayers',
+          path: '/prayers',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'prayers')
+              : const PrayersWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

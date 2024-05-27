@@ -105,9 +105,9 @@ class _SignupWidgetState extends State<SignupWidget>
                             width: 3.5,
                           ),
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_left_rounded,
-                          color: FlutterFlowTheme.of(context).secondaryText,
+                          color: Color(0xFFC7C7C7),
                           size: 46.0,
                         ),
                       ),
