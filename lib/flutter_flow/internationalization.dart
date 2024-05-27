@@ -262,6 +262,48 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
     },
   },
+  // homepage
+  {
+    'i7j43r7a': {
+      'en': 'Home',
+      'te': '',
+    },
+  },
+  // selection
+  {
+    '7o3rsbhh': {
+      'en': 'Select your Church Branch',
+      'te': '',
+    },
+    'gcefmz32': {
+      'en': 'NGO\'s Colony',
+      'te': '',
+    },
+    'hzs1cftf': {
+      'en': 'Nethaji Nagar',
+      'te': '',
+    },
+    '9cm40ujm': {
+      'en': 'Pulladi Gunta',
+      'te': '',
+    },
+    'x2ie96j2': {
+      'en': 'Etukuru',
+      'te': '',
+    },
+    'b5hu7z1h': {
+      'en': 'Rajendra Nagar',
+      'te': '',
+    },
+    '2nty70uc': {
+      'en': 'Submit',
+      'te': '',
+    },
+    'vag57etp': {
+      'en': 'Home',
+      'te': '',
+    },
+  },
   // Miscellaneous
   {
     'x3fwh110': {

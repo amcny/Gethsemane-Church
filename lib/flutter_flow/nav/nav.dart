@@ -70,6 +70,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'signup',
           path: '/signup',
           builder: (context, params) => const SignupWidget(),
+        ),
+        FFRoute(
+          name: 'homepage',
+          path: '/homepage',
+          builder: (context, params) => const HomepageWidget(),
+        ),
+        FFRoute(
+          name: 'selection',
+          path: '/selection',
+          builder: (context, params) => const SelectionWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
