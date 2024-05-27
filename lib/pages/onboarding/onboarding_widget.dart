@@ -84,7 +84,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                     children: [
                       Flexible(
                         child: Align(
-                          alignment: const AlignmentDirectional(0.0, 0.9),
+                          alignment: const AlignmentDirectional(0.0, 0.87),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
@@ -97,7 +97,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                               ),
                               options: FFButtonOptions(
                                 width: MediaQuery.sizeOf(context).width * 1.0,
-                                height: 55.0,
+                                height: 60.0,
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     24.0, 0.0, 24.0, 0.0),
                                 iconPadding: const EdgeInsetsDirectional.fromSTEB(
@@ -130,7 +130,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
             Stack(
               children: [
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.56),
+                  alignment: const AlignmentDirectional(0.0, 0.55),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       'vsvyvztr' /* Gethsemane Church
@@ -168,7 +168,7 @@ Guntur */
               ),
             ),
             Align(
-              alignment: const AlignmentDirectional(0.0, 0.7),
+              alignment: const AlignmentDirectional(0.0, 0.68),
               child: RichText(
                 textScaler: MediaQuery.of(context).textScaler,
                 text: TextSpan(
