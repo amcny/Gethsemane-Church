@@ -40,7 +40,7 @@ class _SignupWidgetState extends State<SignupWidget>
           ShimmerEffect(
             curve: Curves.linear,
             delay: 0.0.ms,
-            duration: 1000.0.ms,
+            duration: 1200.0.ms,
             color: const Color(0x80FFFFFF),
             angle: 0.524,
           ),
