@@ -432,7 +432,7 @@ class _LoginWidgetState extends State<LoginWidget>
                               ),
                               TextSpan(
                                 text: FFLocalizations.of(context).getText(
-                                  '0scll0cm' /* Regain */,
+                                  '0scll0cm' /* Reborn */,
                                 ),
                                 style: const TextStyle(),
                               )
@@ -448,7 +448,7 @@ class _LoginWidgetState extends State<LoginWidget>
                           ),
                         ),
                       ),
-                    ].divide(const SizedBox(height: 18.0)),
+                    ].divide(const SizedBox(height: 10.0)),
                   ),
                 ),
               ),

@@ -59,7 +59,7 @@ class _SelectionWidgetState extends State<SelectionWidget> {
                     style: FlutterFlowTheme.of(context).titleMedium.override(
                           fontFamily: 'Poppins',
                           color: const Color(0xFFF5F5F5),
-                          letterSpacing: 0.0,
+                          letterSpacing: 0.1,
                           fontWeight: FontWeight.w500,
                         ),
                   ),

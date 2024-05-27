@@ -108,7 +108,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // onboarding
   {
     'vsvyvztr': {
-      'en': 'Gethsemane Church\nGuntur',
+      'en': 'Gethsemane Church',
+      'te': '',
+    },
+    '4vhzhbma': {
+      'en': 'Pastor: Rev. Y. Prudhvi Raju',
       'te': '',
     },
     'fcv8mdh6': {
@@ -128,7 +132,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
     },
     'yloyifit': {
-      'en': 'Regain',
+      'en': 'Reborn',
       'te': '',
     },
     'a41bogkl': {
@@ -195,7 +199,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
     },
     '0scll0cm': {
-      'en': 'Regain',
+      'en': 'Reborn',
       'te': '',
     },
     'm4dcn61h': {
@@ -254,7 +258,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
     },
     'nx16qtmt': {
-      'en': 'Regain',
+      'en': 'Reborn',
       'te': '',
     },
     'ktvkcu4d': {
@@ -264,6 +268,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // homepage
   {
+    'l3k7xxeg': {
+      'en': 'Hi, ',
+      'te': '',
+    },
+    '34ug5vtm': {
+      'en': 'Praise the Lord\n',
+      'te': '',
+    },
+    'fbazyvx8': {
+      'en': 'Hi, User',
+      'te': '',
+    },
+    'i3ikvkk4': {
+      'en': 'YouTube Sermons',
+      'te': '',
+    },
     'i7j43r7a': {
       'en': 'Home',
       'te': '',

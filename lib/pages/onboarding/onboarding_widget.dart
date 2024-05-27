@@ -81,10 +81,10 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                     ),
                   ),
                   child: Container(
-                    width: 100.0,
+                    width: MediaQuery.sizeOf(context).width * 1.0,
                     height: 100.0,
                     decoration: const BoxDecoration(
-                      color: Color(0xCC000000),
+                      color: Color(0xCB000000),
                     ),
                   ),
                 ),
@@ -100,19 +100,17 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
                     sigmaY: 1.0,
                   ),
                   child: Align(
-                    alignment: const AlignmentDirectional(0.0, 0.82),
+                    alignment: const AlignmentDirectional(0.0, 0.83),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 15.0),
+                              0.0, 0.0, 0.0, 5.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
-                              'vsvyvztr' /* Gethsemane Church
-Guntur */
-                              ,
+                              'vsvyvztr' /* Gethsemane Church */,
                             ),
                             textAlign: TextAlign.center,
                             style: FlutterFlowTheme.of(context)
@@ -123,6 +121,25 @@ Guntur */
                                   fontSize: 32.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
+                                ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 20.0),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              '4vhzhbma' /* Pastor: Rev. Y. Prudhvi Raju */,
+                            ),
+                            textAlign: TextAlign.center,
+                            style: FlutterFlowTheme.of(context)
+                                .headlineMedium
+                                .override(
+                                  fontFamily: 'Raleway',
+                                  color: const Color(0xFFF5F5F5),
+                                  fontSize: 20.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.w300,
                                 ),
                           ),
                         ),
@@ -167,7 +184,7 @@ Guntur */
                                   ),
                                   TextSpan(
                                     text: FFLocalizations.of(context).getText(
-                                      'yloyifit' /* Regain */,
+                                      'yloyifit' /* Reborn */,
                                     ),
                                     style: const TextStyle(),
                                   )
@@ -191,7 +208,7 @@ Guntur */
                                 16.0, 10.0, 16.0, 0.0),
                             child: FFButtonWidget(
                               onPressed: () async {
-                                context.pushNamed('login');
+                                context.goNamed('login');
                               },
                               text: FFLocalizations.of(context).getText(
                                 'a41bogkl' /* Get Started */,
@@ -222,7 +239,7 @@ Guntur */
                             ),
                           ),
                         ),
-                      ],
+                      ].addToEnd(const SizedBox(height: 10.0)),
                     ),
                   ),
                 ),

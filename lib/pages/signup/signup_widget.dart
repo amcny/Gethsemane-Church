@@ -153,7 +153,7 @@ class _SignupWidgetState extends State<SignupWidget>
                 child: TextFormField(
                   controller: _model.textController1,
                   focusNode: _model.textFieldFocusNode1,
-                  autofocus: true,
+                  autofocus: false,
                   obscureText: false,
                   decoration: InputDecoration(
                     labelText: FFLocalizations.of(context).getText(
@@ -414,7 +414,7 @@ class _SignupWidgetState extends State<SignupWidget>
                               ),
                               TextSpan(
                                 text: FFLocalizations.of(context).getText(
-                                  'nx16qtmt' /* Regain */,
+                                  'nx16qtmt' /* Reborn */,
                                 ),
                                 style: const TextStyle(),
                               )
@@ -430,7 +430,7 @@ class _SignupWidgetState extends State<SignupWidget>
                           ),
                         ),
                       ),
-                    ].divide(const SizedBox(height: 18.0)),
+                    ].divide(const SizedBox(height: 10.0)),
                   ),
                 ),
               ),
