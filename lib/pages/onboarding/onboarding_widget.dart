@@ -232,7 +232,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget>
             Align(
               alignment: const AlignmentDirectional(1.0, -1.0),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 28.0, 15.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 15.0, 0.0),
                 child: Container(
                   width: 60.0,
                   height: 60.0,

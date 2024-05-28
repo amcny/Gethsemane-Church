@@ -29,6 +29,19 @@ class _HomepageWidgetState extends State<HomepageWidget>
     _model = createModel(context, () => HomepageModel());
 
     animationsMap.addAll({
+      'circleImageOnPageLoadAnimation': AnimationInfo(
+        loop: true,
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          ShimmerEffect(
+            curve: Curves.linear,
+            delay: 0.0.ms,
+            duration: 1600.0.ms,
+            color: const Color(0x80FFFFFF),
+            angle: 0.524,
+          ),
+        ],
+      ),
       'imageOnPageLoadAnimation': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
@@ -68,7 +81,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 16.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 18.0, 16.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -84,6 +97,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                 .override(
                                   fontFamily: 'Poppins',
                                   color: const Color(0xFFF5F5F5),
+                                  fontSize: 20.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
                                 ),
@@ -100,7 +114,10 @@ class _HomepageWidgetState extends State<HomepageWidget>
                               functions.wishes(),
                               'wishes',
                             )} 👋',
-                            style: const TextStyle(),
+                            style: const TextStyle(
+                              color: Color(0xFFF5F5F5),
+                              fontSize: 18.0,
+                            ),
                           )
                         ],
                         style: FlutterFlowTheme.of(context)
@@ -108,14 +125,15 @@ class _HomepageWidgetState extends State<HomepageWidget>
                             .override(
                               fontFamily: 'Poppins',
                               color: const Color(0xFFF5F5F5),
+                              fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.w500,
                             ),
                       ),
                     ),
                     Container(
-                      width: 70.0,
-                      height: 70.0,
+                      width: 58.0,
+                      height: 58.0,
                       clipBehavior: Clip.antiAlias,
                       decoration: const BoxDecoration(
                         shape: BoxShape.circle,
@@ -124,7 +142,8 @@ class _HomepageWidgetState extends State<HomepageWidget>
                         'assets/images/gethsemane.jpg',
                         fit: BoxFit.fill,
                       ),
-                    ),
+                    ).animateOnPageLoad(
+                        animationsMap['circleImageOnPageLoadAnimation']!),
                   ],
                 ),
               ),
@@ -141,15 +160,15 @@ class _HomepageWidgetState extends State<HomepageWidget>
                     style: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Poppins',
                           color: const Color(0xFFF5F5F5),
-                          fontSize: 17.0,
-                          letterSpacing: 0.0,
-                          fontWeight: FontWeight.w500,
+                          fontSize: 16.0,
+                          letterSpacing: 0.5,
+                          fontWeight: FontWeight.w200,
                         ),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 16.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -162,7 +181,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                         type: PageTransitionType.fade,
                         child: FlutterFlowExpandedImageView(
                           image: Image.network(
-                            'https://i.postimg.cc/HsFtwCv6/verse.jpg',
+                            'https://i.ibb.co/TYFB9H2/verse.jpg',
                             fit: BoxFit.contain,
                           ),
                           allowRotation: false,
@@ -178,9 +197,9 @@ class _HomepageWidgetState extends State<HomepageWidget>
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: Image.network(
-                        'https://i.postimg.cc/HsFtwCv6/verse.jpg',
+                        'https://i.ibb.co/TYFB9H2/verse.jpg',
                         width: MediaQuery.sizeOf(context).width * 1.0,
-                        height: 350.0,
+                        height: 325.0,
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -190,7 +209,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
               Align(
                 alignment: const AlignmentDirectional(-1.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                   child: Text(
                     'Short Sermons',
                     style: FlutterFlowTheme.of(context).titleSmall.override(

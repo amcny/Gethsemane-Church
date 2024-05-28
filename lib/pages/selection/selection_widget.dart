@@ -110,6 +110,8 @@ class _SelectionWidgetState extends State<SelectionWidget> {
                     FFAppState().update(() {
                       FFAppState().branch = _model.radioButtonValue!;
                     });
+
+                    context.goNamed('homepage');
                   },
                   text: 'Submit',
                   options: FFButtonOptions(

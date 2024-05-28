@@ -155,6 +155,20 @@ class _SignupWidgetState extends State<SignupWidget>
                   obscureText: false,
                   decoration: InputDecoration(
                     labelText: 'Email',
+                    labelStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Poppins',
+                              color: const Color(0xFFF5F5F5),
+                              fontSize: 15.0,
+                              letterSpacing: 0.0,
+                            ),
+                    alignLabelWithHint: false,
+                    hintStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Poppins',
+                          color: const Color(0xFFF5F5F5),
+                          fontSize: 15.0,
+                          letterSpacing: 0.0,
+                        ),
                     enabledBorder: UnderlineInputBorder(
                       borderSide: const BorderSide(
                         color: Color(0xFF3D3D3D),
@@ -184,6 +198,7 @@ class _SignupWidgetState extends State<SignupWidget>
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     filled: true,
+                    fillColor: const Color(0xFF1E1E1E),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Poppins',
@@ -204,6 +219,19 @@ class _SignupWidgetState extends State<SignupWidget>
                   obscureText: !_model.passwordVisibility,
                   decoration: InputDecoration(
                     labelText: 'Password',
+                    labelStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Poppins',
+                              color: const Color(0xFFF5F5F5),
+                              fontSize: 15.0,
+                              letterSpacing: 0.0,
+                            ),
+                    hintStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Poppins',
+                          color: const Color(0xFFF5F5F5),
+                          fontSize: 15.0,
+                          letterSpacing: 0.0,
+                        ),
                     enabledBorder: UnderlineInputBorder(
                       borderSide: const BorderSide(
                         color: Color(0xFF3D3D3D),
@@ -233,6 +261,7 @@ class _SignupWidgetState extends State<SignupWidget>
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     filled: true,
+                    fillColor: const Color(0xFF1E1E1E),
                     suffixIcon: InkWell(
                       onTap: () => setState(
                         () => _model.passwordVisibility =
@@ -262,7 +291,7 @@ class _SignupWidgetState extends State<SignupWidget>
                 padding: const EdgeInsetsDirectional.fromSTEB(16.0, 35.0, 16.0, 0.0),
                 child: FFButtonWidget(
                   onPressed: () async {
-                    context.pushNamed('signup');
+                    context.goNamed('selection');
                   },
                   text: 'Submit',
                   options: FFButtonOptions(
