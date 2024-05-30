@@ -143,7 +143,7 @@ class _NavBarPageState extends State<NavBarPage> {
               FontAwesomeIcons.prayingHands,
               size: 20.0,
             ),
-            label: 'Prayer Requests',
+            label: 'Prayers',
             tooltip: '',
           )
         ],

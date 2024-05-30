@@ -107,9 +107,8 @@ class _SelectionWidgetState extends State<SelectionWidget> {
                 padding: const EdgeInsetsDirectional.fromSTEB(16.0, 25.0, 16.0, 0.0),
                 child: FFButtonWidget(
                   onPressed: () async {
-                    FFAppState().update(() {
-                      FFAppState().branch = _model.radioButtonValue!;
-                    });
+                    FFAppState().branch = _model.radioButtonValue!;
+                    FFAppState().update(() {});
 
                     context.goNamed('homepage');
                   },

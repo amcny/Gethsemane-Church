@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_animations.dart';
+import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -244,9 +245,8 @@ class _HomepageWidgetState extends State<HomepageWidget>
                       children: [
                         Align(
                           alignment: const Alignment(0.0, 0),
-                          child: TabBar(
-                            labelColor: const Color(0xFFF5F5F5),
-                            unselectedLabelColor: const Color(0xFFC7C7C7),
+                          child: FlutterFlowButtonTabBar(
+                            useToggleButtonStyle: false,
                             labelStyle: FlutterFlowTheme.of(context)
                                 .titleMedium
                                 .override(
@@ -254,8 +254,17 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                   letterSpacing: 0.0,
                                 ),
                             unselectedLabelStyle: const TextStyle(),
-                            indicatorColor: const Color(0xFFDD2525),
-                            indicatorWeight: 2.0,
+                            labelColor: const Color(0xFF450A0A),
+                            unselectedLabelColor: const Color(0xFF7F1D1D),
+                            backgroundColor: const Color(0xFFFECACA),
+                            unselectedBackgroundColor: const Color(0xFFFEF2F2),
+                            borderColor: const Color(0xFFDD2525),
+                            unselectedBorderColor: const Color(0xFFFECACA),
+                            borderWidth: 2.0,
+                            borderRadius: 8.0,
+                            elevation: 0.0,
+                            buttonMargin: const EdgeInsetsDirectional.fromSTEB(
+                                8.0, 0.0, 8.0, 0.0),
                             padding: const EdgeInsets.all(4.0),
                             tabs: const [
                               Tab(

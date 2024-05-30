@@ -212,7 +212,7 @@ class _PrayersWidgetState extends State<PrayersWidget> {
                                 child: FaIcon(
                                   FontAwesomeIcons.comments,
                                   color: Color(0xFF575757),
-                                  size: 24.5,
+                                  size: 23.0,
                                 ),
                               ),
                               Padding(
@@ -225,7 +225,7 @@ class _PrayersWidgetState extends State<PrayersWidget> {
                                       .override(
                                         fontFamily: 'Poppins',
                                         color: const Color(0xFFC7C7C7),
-                                        fontSize: 16.0,
+                                        fontSize: 15.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w300,
                                       ),
