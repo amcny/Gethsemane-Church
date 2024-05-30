@@ -25,4 +25,10 @@ class FFAppState extends ChangeNotifier {
   set branch(String value) {
     _branch = value;
   }
+
+  bool _prayed = false;
+  bool get prayed => _prayed;
+  set prayed(bool value) {
+    _prayed = value;
+  }
 }

@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'prayers_model.dart';
 export 'prayers_model.dart';
@@ -88,8 +90,8 @@ class _PrayersWidgetState extends State<PrayersWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Container(
-                                width: 60.0,
-                                height: 60.0,
+                                width: 55.0,
+                                height: 55.0,
                                 clipBehavior: Clip.antiAlias,
                                 decoration: const BoxDecoration(
                                   shape: BoxShape.circle,
@@ -137,7 +139,7 @@ class _PrayersWidgetState extends State<PrayersWidget> {
                                             fontWeight: FontWeight.w300,
                                           ),
                                     ),
-                                  ].divide(const SizedBox(height: 0.5)),
+                                  ].divide(const SizedBox(height: 0.8)),
                                 ),
                               ),
                             ],
@@ -146,7 +148,7 @@ class _PrayersWidgetState extends State<PrayersWidget> {
                             alignment: const AlignmentDirectional(-1.0, 0.0),
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 16.0, 0.0, 0.0),
+                                  5.0, 15.0, 0.0, 15.0),
                               child: Text(
                                 'Praise the Lord. Please pray for my studies.',
                                 maxLines: 5,
@@ -161,6 +163,75 @@ class _PrayersWidgetState extends State<PrayersWidget> {
                                     ),
                               ),
                             ),
+                          ),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              ToggleIcon(
+                                onPressed: () async {
+                                  setState(() => FFAppState().prayed =
+                                      !FFAppState().prayed);
+                                },
+                                value: FFAppState().prayed,
+                                onIcon: const FaIcon(
+                                  FontAwesomeIcons.pray,
+                                  color: Color(0xFFEF3939),
+                                  size: 25.0,
+                                ),
+                                offIcon: const FaIcon(
+                                  FontAwesomeIcons.pray,
+                                  color: Color(0xFF575757),
+                                  size: 25.0,
+                                ),
+                              ),
+                              Flexible(
+                                child: Align(
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        5.0, 0.0, 0.0, 0.0),
+                                    child: Text(
+                                      '15 Prayed',
+                                      style: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .override(
+                                            fontFamily: 'Poppins',
+                                            color: const Color(0xFFEF3939),
+                                            fontSize: 16.0,
+                                            letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 5.0, 0.0),
+                                child: FaIcon(
+                                  FontAwesomeIcons.comments,
+                                  color: Color(0xFF575757),
+                                  size: 24.5,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    10.0, 0.0, 0.0, 0.0),
+                                child: Text(
+                                  '10 Comments',
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        color: const Color(0xFFC7C7C7),
+                                        fontSize: 16.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.w300,
+                                      ),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
