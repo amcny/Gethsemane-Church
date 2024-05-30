@@ -69,11 +69,11 @@ class _SelectionWidgetState extends State<SelectionWidget> {
                   padding: const EdgeInsetsDirectional.fromSTEB(16.0, 25.0, 0.0, 0.0),
                   child: FlutterFlowRadioButton(
                     options: [
-                      'NGO\'s Colony',
-                      'Nethaji Nagar',
-                      'Pulladi Gunta',
-                      'Etukuru',
-                      'Rajendra Nagar'
+                      'NGO\'s Colony (NGO\'s  కాలనీ)',
+                      'Etukuru (ఏటుకూరు)',
+                      'Pulladi Gunta (పుల్లడిగుంట)',
+                      'Nethaji Nagar (నేతాజీ నగర్)',
+                      'Rajendra Nagar (రాజేంద్ర నగర్)'
                     ].toList(),
                     onChanged: (val) => setState(() {}),
                     controller: _model.radioButtonValueController ??=
