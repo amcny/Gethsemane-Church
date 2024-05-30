@@ -207,7 +207,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                         child: Image.network(
                           'https://i.postimg.cc/HsFtwCv6/verse.jpg',
                           width: MediaQuery.sizeOf(context).width * 1.0,
-                          height: 330.0,
+                          height: 325.0,
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -255,7 +255,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                                 ),
                             unselectedLabelStyle: const TextStyle(),
                             indicatorColor: const Color(0xFFDD2525),
-                            indicatorWeight: 1.0,
+                            indicatorWeight: 2.0,
                             padding: const EdgeInsets.all(4.0),
                             tabs: const [
                               Tab(
